@@ -5,4 +5,4 @@ public record User(
     string Name, 
     string EmailAddress,
     bool IsAutenticated,
-    DateTime LastLogin);
+    DateTime LastLogin) : BaseEntity(Guid.NewGuid(), DateTime.UtcNow, DateTime.UtcNow);

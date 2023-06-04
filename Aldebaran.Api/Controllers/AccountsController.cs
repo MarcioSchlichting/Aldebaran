@@ -8,9 +8,10 @@ namespace Aldebaran.Api.Controllers;
 public sealed class AccountsController : ControllerBase
 {
 
-    [HttpPost("authenticate"), AllowAnonymous]
+    [HttpPost("authenticate"), 
+     AllowAnonymous]
     public ActionResult Authenticate([FromBody] UserLoginCommand userLogin)
     {
-        
+        return default;
     }
 }

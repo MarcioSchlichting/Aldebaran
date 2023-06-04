@@ -1,5 +1,5 @@
 ﻿namespace Aldebaran.Api.Controllers;
 
 public record UserLoginCommand(
-    string EmailAddress, 
+    string EmailAddress,
     string Password);
