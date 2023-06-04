@@ -2,5 +2,6 @@
 
 public enum Roles
 {
-    
+    Normal,
+    Administrator,
 }

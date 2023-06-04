@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Accounts", "Accounts", "{41
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aldebaran.Accounts", "Aldebaran.Accounts\Aldebaran.Accounts.csproj", "{FF665A4C-5E7E-454D-8D3D-22FAEEB9CDB5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aldebaran.Api", "Aldebaran.Api\Aldebaran.Api.csproj", "{ADB87473-0D71-401B-9530-5424BAC5F77C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,11 +19,16 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{FF665A4C-5E7E-454D-8D3D-22FAEEB9CDB5} = {4111AEA2-B32A-46A9-9F3A-7A9AFE892FC9}
+		{ADB87473-0D71-401B-9530-5424BAC5F77C} = {4111AEA2-B32A-46A9-9F3A-7A9AFE892FC9}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{FF665A4C-5E7E-454D-8D3D-22FAEEB9CDB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FF665A4C-5E7E-454D-8D3D-22FAEEB9CDB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF665A4C-5E7E-454D-8D3D-22FAEEB9CDB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF665A4C-5E7E-454D-8D3D-22FAEEB9CDB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADB87473-0D71-401B-9530-5424BAC5F77C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADB87473-0D71-401B-9530-5424BAC5F77C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADB87473-0D71-401B-9530-5424BAC5F77C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADB87473-0D71-401B-9530-5424BAC5F77C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
