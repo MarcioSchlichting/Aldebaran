@@ -7,11 +7,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Accounts", "Accounts", "{41
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aldebaran.Accounts", "Aldebaran.Accounts\Aldebaran.Accounts.csproj", "{FF665A4C-5E7E-454D-8D3D-22FAEEB9CDB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aldebaran.Api", "Aldebaran.Api\Aldebaran.Api.csproj", "{ADB87473-0D71-401B-9530-5424BAC5F77C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aldebaran.Accounts.Api", "Aldebaran.Accounts.Api\Aldebaran.Accounts.Api.csproj", "{ADB87473-0D71-401B-9530-5424BAC5F77C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aldebaran.Services", "Aldebaran.Services\Aldebaran.Services.csproj", "{9FF3DB3D-F5D3-424F-9058-45D198F3AF24}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aldebaran.Accounts.Services", "Aldebaran.Accounts.Services\Aldebaran.Accounts.Services.csproj", "{9FF3DB3D-F5D3-424F-9058-45D198F3AF24}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aldebaran.Infrastructure", "Aldebaran.Infrastructure\Aldebaran.Infrastructure.csproj", "{970C24B6-6D4B-424D-BE84-E94E2220ED01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aldebaran.Accounts.Tests", "Aldebaran.Accounts.Tests\Aldebaran.Accounts.Tests.csproj", "{F46759F6-204C-42EB-A45F-93D44D15E491}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +27,7 @@ Global
 		{FF665A4C-5E7E-454D-8D3D-22FAEEB9CDB5} = {4111AEA2-B32A-46A9-9F3A-7A9AFE892FC9}
 		{ADB87473-0D71-401B-9530-5424BAC5F77C} = {4111AEA2-B32A-46A9-9F3A-7A9AFE892FC9}
 		{9FF3DB3D-F5D3-424F-9058-45D198F3AF24} = {4111AEA2-B32A-46A9-9F3A-7A9AFE892FC9}
+		{F46759F6-204C-42EB-A45F-93D44D15E491} = {4111AEA2-B32A-46A9-9F3A-7A9AFE892FC9}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{FF665A4C-5E7E-454D-8D3D-22FAEEB9CDB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -43,5 +46,9 @@ Global
 		{970C24B6-6D4B-424D-BE84-E94E2220ED01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{970C24B6-6D4B-424D-BE84-E94E2220ED01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{970C24B6-6D4B-424D-BE84-E94E2220ED01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F46759F6-204C-42EB-A45F-93D44D15E491}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F46759F6-204C-42EB-A45F-93D44D15E491}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F46759F6-204C-42EB-A45F-93D44D15E491}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F46759F6-204C-42EB-A45F-93D44D15E491}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

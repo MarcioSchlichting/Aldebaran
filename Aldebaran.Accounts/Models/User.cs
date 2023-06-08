@@ -1,7 +1,9 @@
-﻿namespace Aldebaran.Accounts.Models;
+﻿using Aldebaran.Accounts.Models.ValueObjects;
+
+namespace Aldebaran.Accounts.Models;
 
 public record User(
-    string Password, 
+    Password Password, 
     string Name, 
     string EmailAddress,
     bool IsAutenticated,
