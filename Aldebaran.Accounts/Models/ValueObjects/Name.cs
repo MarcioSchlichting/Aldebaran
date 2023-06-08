@@ -1,4 +1,6 @@
-﻿namespace Aldebaran.Accounts.Models.ValueObjects;
+﻿using Aldebaran.Accounts.Shared;
+
+namespace Aldebaran.Accounts.Models.ValueObjects;
 
 public struct Name
 {
@@ -22,13 +24,29 @@ public struct Name
         ? new Name(value) 
         : throw new ArgumentException("Invalid name");
 
+    public static implicit operator string(Name value)
+        => value.ToString();
+
     private static bool Validate(string value)
     {
-        ArgumentException.ThrowIfNullOrEmpty(value, nameof(value));
+        if (string.IsNullOrEmpty(value))
+        {
+            throw new ArgumentException("Invalid name");
+        }
         
-        if (value.Length < 3)
+        int length = value.Length;
+        
+        if (length <= Constants.Name.MinLength)
+            return false;
+
+        if (length > Constants.Name.MaxLength)
             return false;
 
         return true;
+    }
+
+    public override string ToString()
+    {
+        return _value;
     }
 }
