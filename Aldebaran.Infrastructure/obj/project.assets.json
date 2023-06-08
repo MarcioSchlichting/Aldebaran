@@ -46,6 +46,19 @@
           }
         }
       },
+      "FluentValidation/11.5.2": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
         "type": "package",
         "compile": {
@@ -1027,6 +1040,31 @@
             "rid": "win"
           }
         }
+      },
+      "Aldebaran.Accounts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Aldebaran.Domain": "1.0.0",
+          "FluentValidation": "11.5.2",
+          "Microsoft.EntityFrameworkCore": "7.0.5"
+        },
+        "compile": {
+          "bin/placeholder/Aldebaran.Accounts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Aldebaran.Accounts.dll": {}
+        }
+      },
+      "Aldebaran.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Aldebaran.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Aldebaran.Domain.dll": {}
+        }
       }
     }
   },
@@ -1067,6 +1105,29 @@
         "azureicon.png",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
+      ]
+    },
+    "FluentValidation/11.5.2": {
+      "sha512": "kj/hW/iusp2zq1Vt1YPLgDj6UG0DhoJXGkLwjLwm3j7vUtRF8DVA5vHJfItG3BxDjLWJUR2pvw8fK7rnuysZNA==",
+      "type": "package",
+      "path": "fluentvalidation/11.5.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "fluent-validation-icon.png",
+        "fluentvalidation.11.5.2.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net5.0/FluentValidation.dll",
+        "lib/net5.0/FluentValidation.xml",
+        "lib/net6.0/FluentValidation.dll",
+        "lib/net6.0/FluentValidation.xml",
+        "lib/net7.0/FluentValidation.dll",
+        "lib/net7.0/FluentValidation.xml",
+        "lib/netstandard2.0/FluentValidation.dll",
+        "lib/netstandard2.0/FluentValidation.xml",
+        "lib/netstandard2.1/FluentValidation.dll",
+        "lib/netstandard2.1/FluentValidation.xml"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
@@ -3171,10 +3232,22 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Aldebaran.Accounts/1.0.0": {
+      "type": "project",
+      "path": "../Aldebaran.Accounts/Aldebaran.Accounts.csproj",
+      "msbuildProject": "../Aldebaran.Accounts/Aldebaran.Accounts.csproj"
+    },
+    "Aldebaran.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Aldebaran.Domain/Aldebaran.Domain.csproj",
+      "msbuildProject": "../Aldebaran.Domain/Aldebaran.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "Aldebaran.Accounts >= 1.0.0",
+      "Aldebaran.Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.5",
       "Microsoft.EntityFrameworkCore.Abstractions >= 7.0.5",
       "Microsoft.EntityFrameworkCore.Relational >= 7.0.5",
@@ -3213,7 +3286,14 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\marci\\OneDrive\\Área de Trabalho\\For drivers\\Aldebaran\\Aldebaran.Accounts\\Aldebaran.Accounts.csproj": {
+              "projectPath": "C:\\Users\\marci\\OneDrive\\Área de Trabalho\\For drivers\\Aldebaran\\Aldebaran.Accounts\\Aldebaran.Accounts.csproj"
+            },
+            "C:\\Users\\marci\\OneDrive\\Área de Trabalho\\For drivers\\Aldebaran\\Aldebaran.Domain\\Aldebaran.Domain.csproj": {
+              "projectPath": "C:\\Users\\marci\\OneDrive\\Área de Trabalho\\For drivers\\Aldebaran\\Aldebaran.Domain\\Aldebaran.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

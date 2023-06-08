@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "hkbqfX1RPi0Rbl2J0O0GuFglT6Migg1cU1+GQ5jTQz4Qa490jeGZv59W+SAo6ZB3uo/Tk7DQx4yru1Q3MXnErQ==",
+  "dgSpecHash": "QxVbYIq2PxGpOZma1Lr80gvUzj3o3Y6P4epS+7PIEmi4pwt2CFV+D9dl3z4eS/du/GE7pYp+sv/QkODVO3K0Fg==",
   "success": true,
   "projectFilePath": "C:\\Users\\marci\\OneDrive\\Área de Trabalho\\For drivers\\Aldebaran\\Aldebaran.Accounts.Tests\\Aldebaran.Accounts.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marci\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
+    "C:\\Users\\marci\\.nuget\\packages\\fluentvalidation\\11.5.2\\fluentvalidation.11.5.2.nupkg.sha512",
     "C:\\Users\\marci\\.nuget\\packages\\microsoft.codecoverage\\17.3.2\\microsoft.codecoverage.17.3.2.nupkg.sha512",
     "C:\\Users\\marci\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
     "C:\\Users\\marci\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.5\\microsoft.entityframeworkcore.7.0.5.nupkg.sha512",

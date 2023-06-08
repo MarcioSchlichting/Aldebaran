@@ -2,7 +2,7 @@
 
 namespace Aldebaran.Infrastructure;
 
-public class AldebaranContext : DbContext
+public class AldebaranContext : DbContext   
 {
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

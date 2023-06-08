@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net7.0": {
+      "FluentValidation/11.5.2": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore/7.0.5": {
         "type": "package",
         "dependencies": {
@@ -197,10 +210,43 @@
         "build": {
           "buildTransitive/net6.0/_._": {}
         }
+      },
+      "Aldebaran.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Aldebaran.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Aldebaran.Domain.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "FluentValidation/11.5.2": {
+      "sha512": "kj/hW/iusp2zq1Vt1YPLgDj6UG0DhoJXGkLwjLwm3j7vUtRF8DVA5vHJfItG3BxDjLWJUR2pvw8fK7rnuysZNA==",
+      "type": "package",
+      "path": "fluentvalidation/11.5.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "fluent-validation-icon.png",
+        "fluentvalidation.11.5.2.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net5.0/FluentValidation.dll",
+        "lib/net5.0/FluentValidation.xml",
+        "lib/net6.0/FluentValidation.dll",
+        "lib/net6.0/FluentValidation.xml",
+        "lib/net7.0/FluentValidation.dll",
+        "lib/net7.0/FluentValidation.xml",
+        "lib/netstandard2.0/FluentValidation.dll",
+        "lib/netstandard2.0/FluentValidation.xml",
+        "lib/netstandard2.1/FluentValidation.dll",
+        "lib/netstandard2.1/FluentValidation.xml"
+      ]
+    },
     "Microsoft.EntityFrameworkCore/7.0.5": {
       "sha512": "RXbRLHHWP2Z3pq8qcL5nQ6LPeoOyp8hasM5bd0Te8PiQi3RjWQR4tcbdY5XMqQ+oTO9wA8/RLhZRn/hnxlTDnQ==",
       "type": "package",
@@ -510,10 +556,17 @@
         "microsoft.extensions.primitives.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Aldebaran.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Aldebaran.Domain/Aldebaran.Domain.csproj",
+      "msbuildProject": "../Aldebaran.Domain/Aldebaran.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "Aldebaran.Domain >= 1.0.0",
+      "FluentValidation >= 11.5.2",
       "Microsoft.EntityFrameworkCore >= 7.0.5"
     ]
   },
@@ -549,7 +602,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\marci\\OneDrive\\Área de Trabalho\\For drivers\\Aldebaran\\Aldebaran.Domain\\Aldebaran.Domain.csproj": {
+              "projectPath": "C:\\Users\\marci\\OneDrive\\Área de Trabalho\\For drivers\\Aldebaran\\Aldebaran.Domain\\Aldebaran.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -562,6 +619,10 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
+          "FluentValidation": {
+            "target": "Package",
+            "version": "[11.5.2, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[7.0.5, )"

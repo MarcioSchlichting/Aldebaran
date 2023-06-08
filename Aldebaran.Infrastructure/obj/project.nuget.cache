@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "I7r8otB8iv9QOoDZ/RVfQM5IlI3epI5SdufcQhybX1a2DM+EpP/21/KGSBlit9mKz7UWTNa2nCM5xR62gHiqrA==",
+  "dgSpecHash": "Ba8Rqoc68rgY+V3JC1CsPrR2itDQOj8rH7v1q0FrzfRrBgxZuJYz+2O/2+DHkhrbf5+zVfQbMP+9hMDJlp5Hrg==",
   "success": true,
   "projectFilePath": "C:\\Users\\marci\\OneDrive\\Área de Trabalho\\For drivers\\Aldebaran\\Aldebaran.Infrastructure\\Aldebaran.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marci\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\marci\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\marci\\.nuget\\packages\\fluentvalidation\\11.5.2\\fluentvalidation.11.5.2.nupkg.sha512",
     "C:\\Users\\marci\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\marci\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\marci\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.1\\microsoft.data.sqlclient.5.0.1.nupkg.sha512",

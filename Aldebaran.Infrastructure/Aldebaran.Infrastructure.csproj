@@ -13,4 +13,13 @@
       <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.5" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Repositories" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Aldebaran.Accounts\Aldebaran.Accounts.csproj" />
+      <ProjectReference Include="..\Aldebaran.Domain\Aldebaran.Domain.csproj" />
+    </ItemGroup>
+
 </Project>

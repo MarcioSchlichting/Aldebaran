@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "orjpoXdozZP2W3Dga+Iae799jFofVX1IYGNbwwQkc/ooi62FepSzQ9jQXNdkXVMPGQsqdd2IxPpR8LJ24Z3/Qg==",
+  "dgSpecHash": "BrbAs77Z7Fj3qFqnu/GZ5M4SChNunmK8kT+6tFiSotbs5N29HePiL4NWG6dkPV+q+0lMp3BqgbIaNuKSdRx+JA==",
   "success": true,
   "projectFilePath": "C:\\Users\\marci\\OneDrive\\Área de Trabalho\\For drivers\\Aldebaran\\Aldebaran.Accounts\\Aldebaran.Accounts.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\marci\\.nuget\\packages\\fluentvalidation\\11.5.2\\fluentvalidation.11.5.2.nupkg.sha512",
     "C:\\Users\\marci\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.5\\microsoft.entityframeworkcore.7.0.5.nupkg.sha512",
     "C:\\Users\\marci\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.5\\microsoft.entityframeworkcore.abstractions.7.0.5.nupkg.sha512",
     "C:\\Users\\marci\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.5\\microsoft.entityframeworkcore.analyzers.7.0.5.nupkg.sha512",
