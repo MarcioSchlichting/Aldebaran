@@ -1,4 +1,7 @@
 ﻿using Aldebaran.Accounts.Repositories;
+using Aldebaran.Domain.ApiResponses;
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Aldebaran.Accounts.Api.Controllers;
 
@@ -11,19 +14,17 @@ public class AccountService
         _userRepository = userRepository;
     }
     
-    public async Task<string> Login(UserLoginCommand command)
+    public async Task<ActionResult<ServiceResponse<UserLoginResponse>>> LoginAsync(UserLoginCommand command)
     {
-        var user = await _userRepository;
-        if (user == null)
-        {
-            throw new Exception("User not found");
-        }
+        var emailAddress = command.SanitizeEmailAddress();
+        
+        var existsEmail = await _userRepository.ExistsEmailAsync(emailAddress);
 
-        if (!user.Password.Equals(command.Password))
+        if (!existsEmail)
         {
-            throw new Exception("Invalid password");
+            
         }
-
+        
         return user;
     }
 }

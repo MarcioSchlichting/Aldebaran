@@ -5,4 +5,5 @@ namespace Aldebaran.Accounts.Repositories;
 
 public interface IUserRepository : IBaseRepository<User>
 {
+    public Task<bool> ExistsEmailAsync(string emailAddress);
 }
