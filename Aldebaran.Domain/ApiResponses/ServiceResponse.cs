@@ -2,7 +2,7 @@
 
 namespace Aldebaran.Domain.ApiResponses;
 
-public class ServiceResponse<T>
+public class ServiceResponse<T> where T : new()
 {
     private readonly IList<string> _messages;
 
@@ -17,7 +17,7 @@ public class ServiceResponse<T>
         _messages = new List<string>();
         Response = response;
     }
-
+    
     public T Response { get; }
     
     public bool HasErrors => _messages.Any();
@@ -32,18 +32,26 @@ public class ServiceResponse<T>
 
 public static class ServiceResponseExtensions
 {
-    public static ServiceResponse<T> NotFound<T>(this T response)
+    public static ServiceResponse<T> NotFound<T>(string parameter) where T : new()
     {
-        return new ServiceResponse<T>(response);
+        return new ServiceResponse<T>(new T())
+            .AddMessage(Constants
+                .Messages
+                .NotFound(parameter));
     }
 
-    public static ServiceResponse<T> NotFound<T>(this ServiceResponse<T> serviceResponse, string parameter)
+    public static ServiceResponse<T> NotFound<T>(this ServiceResponse<T> serviceResponse, string parameter) where T : new()
     {
         return serviceResponse
             .AddMessage(Constants
                 .Messages
                 .NotFound(parameter));
     }
+}
+
+public record BaseResponse()
+{
+    public static BaseResponse New() => new();
 }
 
 public static class Constants

@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Aldebaran.Accounts\Aldebaran.Accounts.csproj" />
+    <ProjectReference Include="..\Aldebaran.Infrastructure\Aldebaran.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

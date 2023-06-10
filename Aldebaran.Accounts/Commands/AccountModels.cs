@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Aldebaran.Domain.ApiResponses;
 
-namespace Aldebaran.Accounts.Api.Controllers;
+namespace Aldebaran.Accounts.Commands;
 
 public record UserLoginCommand(
     [Required] string EmailAddress,
@@ -11,4 +12,7 @@ public record UserLoginCommand(
         .ToLowerInvariant();
 }
 
-public record UserLoginResponse(string AuthorizationToken);
+public record UserLoginResponse : BaseResponse
+{
+    public string Token { get; set; }
+}

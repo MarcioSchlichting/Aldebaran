@@ -1,4 +1,5 @@
-﻿using Aldebaran.Domain.ApiResponses;
+﻿using Aldebaran.Accounts.Commands;
+using Aldebaran.Domain.ApiResponses;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,6 +22,6 @@ public sealed class AccountsController : ControllerBase
     {
         var result = await _accountService.LoginAsync(userLogin);
         
-        return default;
+        return Ok(result);
     }
 }
