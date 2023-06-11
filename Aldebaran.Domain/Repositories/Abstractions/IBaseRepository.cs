@@ -1,4 +1,6 @@
-﻿namespace Aldebaran.Domain.Repositories.Abstractions;
+﻿using Aldebaran.Accounts;
+
+namespace Aldebaran.Domain.Repositories.Abstractions;
 
 public interface IBaseRepository<TEntity> where TEntity : BaseEntity
 {
@@ -9,4 +11,6 @@ public interface IBaseRepository<TEntity> where TEntity : BaseEntity
     Task<TEntity> DeleteAsync(Guid id);
 
     Task<TEntity> GetByIdAsync(Guid id);
+
+    Task SaveChangesAsync();
 }

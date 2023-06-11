@@ -210,16 +210,6 @@
         "build": {
           "buildTransitive/net6.0/_._": {}
         }
-      },
-      "Aldebaran.Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "compile": {
-          "bin/placeholder/Aldebaran.Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Aldebaran.Domain.dll": {}
-        }
       }
     }
   },
@@ -556,16 +546,10 @@
         "microsoft.extensions.primitives.nuspec",
         "useSharedDesignerContext.txt"
       ]
-    },
-    "Aldebaran.Domain/1.0.0": {
-      "type": "project",
-      "path": "../Aldebaran.Domain/Aldebaran.Domain.csproj",
-      "msbuildProject": "../Aldebaran.Domain/Aldebaran.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Aldebaran.Domain >= 1.0.0",
       "FluentValidation >= 11.5.2",
       "Microsoft.EntityFrameworkCore >= 7.0.5"
     ]
@@ -602,11 +586,7 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {
-            "C:\\Users\\marci\\OneDrive\\Área de Trabalho\\For drivers\\Aldebaran\\Aldebaran.Domain\\Aldebaran.Domain.csproj": {
-              "projectPath": "C:\\Users\\marci\\OneDrive\\Área de Trabalho\\For drivers\\Aldebaran\\Aldebaran.Domain\\Aldebaran.Domain.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

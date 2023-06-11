@@ -1,5 +1,6 @@
 ﻿using Aldebaran.Accounts.Models;
-using Aldebaran.Accounts.Repositories;
+using Aldebaran.Domain.Repositories.Abstractions;
+using Aldebaran.Domain.Repositories.Models;
 using Aldebaran.Infrastructure.Concretes;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,5 +19,14 @@ public class UserRepository : BaseRepository<User>, IUserRepository
             .FirstOrDefaultAsync(u => u.EmailAddress == emailAddress);
         
         return user != null;
+    }
+    
+    public async Task<UserInfo> GetUserInfoAsync(string emailAddress)
+    {
+        var user = await _dbContext
+            .Set<User>()
+            .FirstOrDefaultAsync(u => u.EmailAddress == emailAddress);
+        
+        return new UserInfo(user!.Name, user.Role);
     }
 }

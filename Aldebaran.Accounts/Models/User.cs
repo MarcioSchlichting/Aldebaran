@@ -1,5 +1,4 @@
 ﻿using Aldebaran.Accounts.Validators;
-using Aldebaran.Domain.Repositories.Abstractions;
 using Aldebaran.Domain.Validators;
 
 namespace Aldebaran.Accounts.Models;
@@ -9,6 +8,7 @@ public record User(
     string Name,
     string EmailAddress,
     bool IsAuthenticated,
+    Roles Role,
     DateTime LastLogin) : BaseEntity(Guid.NewGuid(), DateTime.UtcNow, DateTime.UtcNow)
 {
     public override ValidatorResult Validate()

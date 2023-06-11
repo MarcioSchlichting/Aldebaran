@@ -1,5 +1,4 @@
-﻿using Aldebaran.Domain.Repositories.Abstractions;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 
 namespace Aldebaran.Accounts;
 

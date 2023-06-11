@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Aldebaran.Accounts.Api.props" />
+</Project>

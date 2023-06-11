@@ -12,7 +12,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Aldebaran.Domain\Aldebaran.Domain.csproj" />
+      <Folder Include="Repositories" />
     </ItemGroup>
 
 </Project>

@@ -1,5 +1,6 @@
 ﻿using Aldebaran.Accounts.Commands;
 using Aldebaran.Domain.ApiResponses;
+using Aldebaran.Services.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,9 +10,9 @@ namespace Aldebaran.Accounts.Api.Controllers;
  Route("[controller]")]
 public sealed class AccountsController : ControllerBase
 {
-    private readonly AccountService _accountService;
+    private readonly IAccountService _accountService;
 
-    public AccountsController(AccountService accountService)
+    public AccountsController(IAccountService accountService)
     {
         _accountService = accountService;
     }

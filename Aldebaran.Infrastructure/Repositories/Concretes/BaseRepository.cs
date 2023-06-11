@@ -1,4 +1,5 @@
-﻿using Aldebaran.Domain.Repositories.Abstractions;
+﻿using Aldebaran.Accounts;
+using Aldebaran.Domain.Repositories.Abstractions;
 using Microsoft.EntityFrameworkCore;
 
 namespace Aldebaran.Infrastructure.Concretes;
@@ -38,5 +39,10 @@ public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : 
     public async Task<TEntity> GetByIdAsync(Guid id)
     {
         return (await _dbContext.Set<TEntity>().FindAsync(id))!;
+    }
+
+    public async Task SaveChangesAsync()
+    {
+        await _dbContext.SaveChangesAsync();
     }
 }

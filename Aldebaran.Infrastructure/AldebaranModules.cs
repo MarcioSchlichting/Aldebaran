@@ -1,9 +1,9 @@
-﻿using Aldebaran.Accounts.Repositories;
-using Aldebaran.Accounts.Services;
+﻿using Aldebaran.Accounts;
 using Aldebaran.Domain;
 using Aldebaran.Domain.Repositories.Abstractions;
 using Aldebaran.Infrastructure.Concretes;
 using Aldebaran.Infrastructure.Repositories.Concretes;
+using Aldebaran.Services.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -21,6 +21,7 @@ public static class AldebaranModules
 
     public static void AddServices(this IServiceCollection services)
     {
-        services.AddTransient<IAccountService>();
+        services.AddTransient<IAccountService, AccountService>();
+        services.AddTransient<IJwtGeneratorService, JwtGeneratorService>();
     }
 }

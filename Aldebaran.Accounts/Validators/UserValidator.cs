@@ -1,5 +1,4 @@
-﻿using System.Reflection.Metadata;
-using Aldebaran.Accounts.Models;
+﻿using Aldebaran.Accounts.Models;
 using Aldebaran.Accounts.Shared;
 using FluentValidation;
 
