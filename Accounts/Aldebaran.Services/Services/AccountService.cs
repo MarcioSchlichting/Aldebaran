@@ -72,4 +72,23 @@ public sealed class AccountService : IAccountService
             Id = guid
         });
     }
+
+    public async Task<ServiceResponse<GetUserResponse>> GetUserByIdAsync(Guid id)
+    {
+        if (id == default)
+            return BadRequest<GetUserResponse>("The id is invalid.");
+        
+        var user = await _userRepository.GetByIdAsync(id);
+
+        if (user == null)
+            return NotFound<GetUserResponse>(nameof(id));
+
+        return new ServiceResponse<GetUserResponse>(new GetUserResponse()
+        {
+            Name = user.Name,
+            Role = user.Role,
+            EmailAddress = user.EmailAddress,
+            LastLogin = user.LastLogin
+        });
+    }
 }

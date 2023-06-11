@@ -33,4 +33,12 @@ public sealed class AccountsController : Controller
         
         return result.ToResponse();
     }
+    
+    [HttpGet]
+    public async Task<ActionResult<GetUserResponse>> GetUserByIdAsync([FromQuery] Guid id)
+    {
+        var result = await _accountService.GetUserByIdAsync(id);
+        
+        return result.ToResponse();
+    }
 }

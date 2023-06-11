@@ -38,7 +38,7 @@ public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : 
 
     public async Task<TEntity> GetByIdAsync(Guid id)
     {
-        return (await _dbContext.Set<TEntity>().FindAsync(id))!;
+        return (await _dbContext.Set<TEntity>().FindAsync(id));
     }
 
     public async Task SaveChangesAsync()
