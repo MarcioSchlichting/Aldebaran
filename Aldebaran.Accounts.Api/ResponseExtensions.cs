@@ -7,7 +7,7 @@ public static class ResponseExtensions
 {
     public static ActionResult<T> ToResponse<T>(this ServiceResponse<T> response) where T : class, new()
     {
-        if (response.HasErrors is true)
+        if (response.HasErrors)
         {
             return new ObjectResult(response.Messages)
             {

@@ -12,8 +12,8 @@ public readonly struct Password
         _password = password;
     }
     
-    public static implicit operator Password(string password) => new(password);
-    
+    public string Value => _password;
+
     public static Password EncryptPassword(string password)
     {
         byte[] salt = new byte[128 / 8]; // Generate a 128-bit salt using a secure PRNG
@@ -33,8 +33,19 @@ public readonly struct Password
         return encryptedPassw;
     }
 
-    public override string ToString()
-    {
-        return this._password;
-    }
+    public override string ToString() => _password;
+
+    public static bool operator ==(Password left, Password right) => left.Value == right.Value;
+
+    public static bool operator !=(Password left, Password right) => !(left == right);
+
+    public static implicit operator Password(string password) => new(password);
+    
+    public static implicit operator string(Password password) => password.ToString();
+    
+    public bool Equals(Password other) => _password == other._password;
+
+    public override bool Equals(object? obj) => obj is Password other && Equals(other);
+
+    public override int GetHashCode() => _password.GetHashCode();
 }

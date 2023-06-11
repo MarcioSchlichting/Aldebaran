@@ -68,6 +68,6 @@ public static class Constants
     {
         public static string NotFound(string parameter) => $"The {parameter} was not found.";
         
-        public static string BadRequest(string error) => $"The request was invalid. {error}";
+        public static string BadRequest(string error) => error;
     }
 }

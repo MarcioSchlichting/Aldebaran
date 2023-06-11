@@ -5,7 +5,9 @@ namespace Aldebaran.Domain.Repositories.Abstractions;
 
 public interface IUserRepository : IBaseRepository<User>
 {
-    public Task<bool> ExistsEmailAsync(string emailAddress);
+    Task<bool> ExistsEmailAsync(string emailAddress);
 
     Task<UserInfo> GetUserInfoAsync(string emailAddress);
+
+    Task<bool> AlreadyExistsAsync(User user);
 }

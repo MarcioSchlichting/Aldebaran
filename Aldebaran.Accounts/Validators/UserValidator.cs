@@ -19,7 +19,7 @@ public class UserValidator : AbstractValidator<User>
             .NotEmpty()
             .EmailAddress();
         
-        RuleFor(x => x.Password.ToString())
+        RuleFor<string>(x => x.Password)
             .NotNull()
             .NotEmpty()
             .MinimumLength(8);

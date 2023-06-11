@@ -29,4 +29,17 @@ public class UserRepository : BaseRepository<User>, IUserRepository
         
         return new UserInfo(user!.Name, user.Role);
     }
+
+    public async Task<bool> AlreadyExistsAsync(User user)
+    {
+        var users = await _dbContext
+            .Set<User>()
+            .Where(u =>
+                u.EmailAddress == user.EmailAddress ||
+                u.Password == user.Password ||
+                u.Name == user.Name)
+            .ToListAsync();
+        
+        return users.Any();
+    }
 }

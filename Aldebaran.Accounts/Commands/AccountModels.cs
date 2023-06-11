@@ -26,5 +26,5 @@ public record UserRegisterCommand(
 
 public record UserRegisterResponse : BaseResponse
 {
-    
+    public Guid Id { get; set; }
 }

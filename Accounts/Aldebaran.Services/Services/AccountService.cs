@@ -54,6 +54,22 @@ public sealed class AccountService : IAccountService
         if (!result.IsValid)
             return BadRequest<UserRegisterResponse>(string.Join('.', result.Errors));
 
-        return default;
+        var passwordEncrypted = Password.EncryptPassword(user.Password);
+        
+        user = user with { Password = passwordEncrypted };
+        
+        var alreadyExists = await _userRepository.AlreadyExistsAsync(user);
+
+        if (alreadyExists)
+            return BadRequest<UserRegisterResponse>("The email address or password or username already exists.");
+
+        var guid = await _userRepository.AddAsync(user);
+
+        await _userRepository.SaveChangesAsync();
+        
+        return new ServiceResponse<UserRegisterResponse>(new UserRegisterResponse()
+        {
+            Id = guid
+        });
     }
 }
