@@ -1,16 +1,18 @@
-﻿using Aldebaran.Accounts.Validators;
+﻿using Aldebaran.Accounts.Models.ValueObjects;
+using Aldebaran.Accounts.Validators;
 using Aldebaran.Domain.Validators;
 
 namespace Aldebaran.Accounts.Models;
 
 public record User(
-    string Password,
+    Password Password,
     string Name,
     string EmailAddress,
     bool IsAuthenticated,
-    Roles Role,
-    DateTime LastLogin) : BaseEntity(Guid.NewGuid(), DateTime.UtcNow, DateTime.UtcNow)
+    Roles Role) : BaseEntity(Guid.NewGuid(), DateTime.UtcNow, DateTime.UtcNow)
 {
+    public DateTime LastLogin { get; set; } 
+    
     public override ValidatorResult Validate()
     {
         var validator = new UserValidator();

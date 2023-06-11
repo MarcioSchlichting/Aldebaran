@@ -8,6 +8,7 @@
 
     <ItemGroup>
       <Folder Include="Repositories" />
+      <Folder Include="Utils" />
       <Folder Include="Validators" />
     </ItemGroup>
 

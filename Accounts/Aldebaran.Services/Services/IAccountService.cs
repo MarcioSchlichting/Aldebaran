@@ -6,4 +6,6 @@ namespace Aldebaran.Services.Services;
 public interface IAccountService
 {
     public Task<ServiceResponse<UserLoginResponse>> LoginAsync(UserLoginCommand command);
+    
+    public Task<ServiceResponse<UserRegisterResponse>> RegisterAsync(UserRegisterCommand command);
 }

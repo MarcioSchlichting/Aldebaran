@@ -8,7 +8,7 @@ namespace Aldebaran.Accounts.Api.Controllers;
 
 [ApiController, 
  Route("[controller]")]
-public sealed class AccountsController : ControllerBase
+public sealed class AccountsController : Controller
 {
     private readonly IAccountService _accountService;
 
@@ -19,10 +19,18 @@ public sealed class AccountsController : ControllerBase
     
     [HttpPost("authenticate"), 
      AllowAnonymous]
-    public async Task<ActionResult<ServiceResponse<UserLoginResponse>>> LoginAsync([FromBody] UserLoginCommand userLogin)
+    public async Task<ActionResult<UserLoginResponse>> LoginAsync([FromBody] UserLoginCommand userLogin)
     {
         var result = await _accountService.LoginAsync(userLogin);
         
-        return Ok(result);
+        return result.ToResponse();
+    }
+    
+    [HttpPost("register")]
+    public async Task<ActionResult<UserRegisterResponse>> RegisterAsync([FromBody] UserRegisterCommand userRegister)
+    {
+        var result = await _accountService.RegisterAsync(userRegister);
+        
+        return result.ToResponse();
     }
 }

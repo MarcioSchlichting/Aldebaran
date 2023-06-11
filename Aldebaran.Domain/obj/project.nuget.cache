@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ZhV3Qnfkbtf07XaPoQN/JH6li/MARYhaD6vFAjXHhO4RwaktdVDHIdVFIH1fSdSu2+PwKOSxk8pbUqMtKflIXg==",
+  "dgSpecHash": "sy16ajNHtqW1EwJQx6pk23wf1aBqedpWpfvBRYcUiFaE/ydyVeaafIas8bMfkwxdSpbs1M8TFPulqZkVRRFYtQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\marci\\OneDrive\\Área de Trabalho\\For drivers\\Aldebaran\\Aldebaran.Domain\\Aldebaran.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marci\\.nuget\\packages\\fluentvalidation\\11.5.2\\fluentvalidation.11.5.2.nupkg.sha512",
+    "C:\\Users\\marci\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.5\\microsoft.aspnetcore.cryptography.internal.7.0.5.nupkg.sha512",
+    "C:\\Users\\marci\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.5\\microsoft.aspnetcore.cryptography.keyderivation.7.0.5.nupkg.sha512",
     "C:\\Users\\marci\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.5\\microsoft.entityframeworkcore.7.0.5.nupkg.sha512",
     "C:\\Users\\marci\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.5\\microsoft.entityframeworkcore.abstractions.7.0.5.nupkg.sha512",
     "C:\\Users\\marci\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.5\\microsoft.entityframeworkcore.analyzers.7.0.5.nupkg.sha512",

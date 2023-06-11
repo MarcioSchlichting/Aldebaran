@@ -1,4 +1,5 @@
 ﻿using Aldebaran.Accounts.Models;
+using Aldebaran.Accounts.Models.ValueObjects;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -14,7 +15,10 @@ public class UserBuilder : IEntityTypeConfiguration<User>
             .Property(b => b.Name)
             .HasMaxLength(100);
 
-        builder.Property(b => b.Password);
+        builder.Property(b => b.Password)
+            .HasConversion(
+                password => password.ToString(),
+                password => new Password(password!));
 
         builder.Property(b => b.Role)
             .HasConversion(

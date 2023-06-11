@@ -20,6 +20,8 @@ public class ServiceResponse<T> where T : new()
     
     public bool HasErrors => _messages.Any();
     
+    public IReadOnlyList<string> Messages => _messages.ToList();
+
     public ServiceResponse<T> AddMessage(string message)
     {
         _messages.Add(message);
@@ -36,6 +38,14 @@ public static class ServiceResponseExtensions
             .AddMessage(Constants
                 .Messages
                 .NotFound(parameter));
+    }
+    
+    public static ServiceResponse<T> BadRequest<T>(string parameter) where T : new()
+    {
+        return new ServiceResponse<T>(new T())
+            .AddMessage(Constants
+                .Messages
+                .BadRequest(parameter));
     }
 
     public static ServiceResponse<T> NotFound<T>(this ServiceResponse<T> serviceResponse, string parameter) where T : new()
@@ -57,5 +67,7 @@ public static class Constants
     public static class Messages
     {
         public static string NotFound(string parameter) => $"The {parameter} was not found.";
+        
+        public static string BadRequest(string error) => $"The request was invalid. {error}";
     }
 }
