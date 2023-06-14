@@ -16,4 +16,8 @@
       <Folder Include="Repositories" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Aldebaran.Core.Shared\Aldebaran.Core.Shared.csproj" />
+    </ItemGroup>
+
 </Project>
