@@ -1,10 +1,10 @@
-﻿using System.Reflection.Metadata.Ecma335;
-using Aldebaran.Accounts.Commands;
+﻿using Aldebaran.Accounts.Commands;
 using Aldebaran.Accounts.Models;
 using Aldebaran.Accounts.Models.ValueObjects;
-using Aldebaran.Domain.ApiResponses;
+using Aldebaran.Accounts.Responses;
+using Aldebaran.Core.Shared.ApiResponses;
 using Aldebaran.Domain.Repositories.Abstractions;
-using static Aldebaran.Domain.ApiResponses.ServiceResponseExtensions;
+using static Aldebaran.Core.Shared.ApiResponses.ServiceResponseExtensions;
 
 namespace Aldebaran.Services.Services;
 

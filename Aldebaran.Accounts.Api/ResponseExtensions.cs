@@ -1,4 +1,4 @@
-﻿using Aldebaran.Domain.ApiResponses;
+﻿using Aldebaran.Core.Shared.ApiResponses;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Aldebaran.Accounts.Api;

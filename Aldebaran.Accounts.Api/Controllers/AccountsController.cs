@@ -1,5 +1,5 @@
 ﻿using Aldebaran.Accounts.Commands;
-using Aldebaran.Domain.ApiResponses;
+using Aldebaran.Accounts.Responses;
 using Aldebaran.Services.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

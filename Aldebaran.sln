@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aldebaran.Domain", "Aldebar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aldebaran.Services", "Accounts\Aldebaran.Services\Aldebaran.Services.csproj", "{96353C7E-DDCA-48F5-AF92-9FA3758EFCEC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aldebaran.Core.Shared", "Aldebaran.Core.Shared\Aldebaran.Core.Shared.csproj", "{5B290816-98FF-44E4-B30E-94AFC1682A7C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,5 +51,9 @@ Global
 		{96353C7E-DDCA-48F5-AF92-9FA3758EFCEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96353C7E-DDCA-48F5-AF92-9FA3758EFCEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96353C7E-DDCA-48F5-AF92-9FA3758EFCEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B290816-98FF-44E4-B30E-94AFC1682A7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B290816-98FF-44E4-B30E-94AFC1682A7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B290816-98FF-44E4-B30E-94AFC1682A7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B290816-98FF-44E4-B30E-94AFC1682A7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

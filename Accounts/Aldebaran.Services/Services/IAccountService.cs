@@ -1,5 +1,6 @@
 ﻿using Aldebaran.Accounts.Commands;
-using Aldebaran.Domain.ApiResponses;
+using Aldebaran.Accounts.Responses;
+using Aldebaran.Core.Shared.ApiResponses;
 
 namespace Aldebaran.Services.Services;
 
