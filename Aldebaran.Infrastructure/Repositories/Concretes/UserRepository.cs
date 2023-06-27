@@ -14,11 +14,9 @@ public class UserRepository : BaseRepository<User>, IUserRepository
 
     public async Task<bool> ExistsEmailAsync(string emailAddress)
     {
-        var user = await _dbContext
+        return await _dbContext
             .Set<User>()
-            .FirstOrDefaultAsync(u => u.EmailAddress == emailAddress);
-        
-        return user != null;
+            .AnyAsync(u => u.EmailAddress == emailAddress);
     }
     
     public async Task<UserInfo> GetUserInfoAsync(string emailAddress)
@@ -32,14 +30,11 @@ public class UserRepository : BaseRepository<User>, IUserRepository
 
     public async Task<bool> AlreadyExistsAsync(User user)
     {
-        var users = await _dbContext
+        return await _dbContext
             .Set<User>()
-            .Where(u =>
+            .AnyAsync(u =>
                 u.EmailAddress == user.EmailAddress ||
                 u.Password == user.Password ||
-                u.Name == user.Name)
-            .ToListAsync();
-        
-        return users.Any();
+                u.Name == user.Name);
     }
 }

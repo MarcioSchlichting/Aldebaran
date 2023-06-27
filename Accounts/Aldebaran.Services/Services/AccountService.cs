@@ -80,7 +80,7 @@ public sealed class AccountService : IAccountService
         
         var user = await _userRepository.GetByIdAsync(id);
 
-        if (user == null)
+        if (user is null)
             return NotFound<GetUserResponse>(nameof(id));
 
         return new ServiceResponse<GetUserResponse>(new GetUserResponse()
